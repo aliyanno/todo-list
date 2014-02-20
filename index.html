@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="toDoApp">
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="todo-style.css">
+	<script src="underscore.js"></script>
+	<script src="angular.js"></script>
+	<script src="todo-list.js"></script>
+</head>
+
+<body ng-controller="toDoController">
+	<h2>Tasks for Today: {{ totalTasks }}</h2>
+	<ul class="no-style">
+		<li ng-repeat="task in tasks">
+			<input type="checkbox" ng-model="task.done">
+			<span class="complete-{{ task.done }}">{{ task.name }}</span>
+		</li>
+	</ul>
+	<input type="text" ng-model="newTaskName">
+	<input type="submit" value="Add Task" ng-click="addTask(newTaskName)">
+	<input type="submit" value="Remove Completed Tasks" ng-click="clearCompleted()">
+</body>
+</html>
