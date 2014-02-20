@@ -1,7 +1,76 @@
-ul.no-style {
-	list-style-type: none;
+body {
+	background:#888
+}
+
+.container {
+	width:960px;
+	max-width:100%;
+	margin:auto;
+	background:#fff;
+	text-align:center;
+	box-shadow: 0px 3px 6px #333;
+}
+
+.content {
+	padding:20px;
+	margin: 20px;
+}
+
+.container .content h2 {
+	margin-bottom:20px;
+	font-weight: normal;
+	font-size: 36px;
+}
+
+.container .content ul.no-style {
+	list-style-type:none;
+	text-align: left;
+	padding: 20px;
+	padding-left: 41%;
+}
+.border-bottom {
+	border-bottom: 1px solid #ddd;
 }
 .complete-true {
-		color: #bbb;
-		font-style: italic;
+	color:#bbb;
+	font-style:italic;
+}
+.check-box {
+	background: white;
+}
+.user-input {
+	margin-top: 10px;
+}
+.new-task-input {
+	height: 31px;
+}
+.remove-btn {
+	display: block;
+	margin: auto;
+	padding: 13px;
+	margin-top: 20px;
+	background: #d84e1d;
+	border-radius: 3px;
+	border: 1px solid #d84e1d;
+}
+.remove-btn:hover {
+	border: 1px solid #d84e1d;
+	background: #ca4819;
+}
+
+.add-btn {
+	margin: auto;
+	margin-top: 5px;
+	padding: 10px;
+	background: white;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+}
+
+.add-btn:hover {
+	background: #ddd;
+}
+
+.add-btn:active {
+	box-shadow: 0px 1px 3px #56b1d9;
 }
