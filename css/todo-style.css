@@ -7,8 +7,8 @@ body {
 	max-width:100%;
 	margin:auto;
 	background:#fff;
-	text-align:center;
 	box-shadow: 0px 3px 6px #333;
+	border-radius: 5px;
 }
 
 .content {
@@ -22,11 +22,20 @@ body {
 	font-size: 36px;
 }
 
+.big-count {
+	font-size: 50px;
+}
+
 .container .content ul.no-style {
 	list-style-type:none;
 	text-align: left;
 	padding: 20px;
-	padding-left: 41%;
+	padding-left: 5%;
+}
+.hide-empty {
+	font-style: italic;
+	font-weight: normal;
+	margin: 0;
 }
 .border-bottom {
 	border-bottom: 1px solid #ddd;
@@ -35,27 +44,26 @@ body {
 	color:#bbb;
 	font-style:italic;
 }
-.check-box {
-	background: white;
-}
 .user-input {
 	margin-top: 10px;
 }
 .new-task-input {
 	height: 31px;
 }
+.align-right {
+	float: right;
+	margin-top: -15px;	
+}
 .remove-btn {
-	display: block;
-	margin: auto;
-	padding: 13px;
+	padding: 10px;
 	margin-top: 20px;
-	background: #d84e1d;
+	background: #59ac5b;
 	border-radius: 3px;
-	border: 1px solid #d84e1d;
+	border: 1px solid #59ac5b;
+	color:white;
 }
 .remove-btn:hover {
-	border: 1px solid #d84e1d;
-	background: #ca4819;
+	background: #438e4f;
 }
 
 .add-btn {
@@ -74,3 +82,5 @@ body {
 .add-btn:active {
 	box-shadow: 0px 1px 3px #56b1d9;
 }
+.add-btn:focus {
+	box-shadow: none;

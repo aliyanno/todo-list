@@ -3,7 +3,7 @@
 <head>
 	<title>To Do List</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/todo-style.css"
+	<link rel="stylesheet" href="css/todo-style.css">
 	<script src="js/underscore.js"></script>
 	<script src="js/angular.js"></script>
 	<script src="js/todo-list.js"></script>
@@ -12,19 +12,22 @@
 <body ng-controller="toDoController">
 	<div class="container">
 		<div class="content">
-			<h2>Tasks for Today: {{ getTotalTasks() }}</h2>
+			<h2><span class="big-count">{{ getTotalTasks() }} </span> Tasks for Today</h2>
 			<div class="border-bottom"></div>
 			<ul class="no-style">
 				<li ng-repeat="task in tasks">
-					<input class="check-box" type="checkbox" ng-model="task.done">
+					<input type="checkbox" ng-model="task.done">
 					<span class="complete-{{ task.done }}">{{ task.name }}</span>
 				</li>
+				<h4 class="hide-empty" ng-if="isEmpty()">{{ empty }}</h4>
 			</ul>
 			<div class="border-bottom"></div>
 			<div class="user-input">
 				<input class="new-task-input" type="text" ng-model="newTaskName">
 				<input class="add-btn" type="submit" value="Add Task" ng-click="addTask(newTaskName)">
-				<input class="remove-btn" type="submit" value="Remove Completed Tasks" ng-click="clearCompleted()">
+				<div class="align-right">
+					<input class="remove-btn" type="submit" value="Remove Completed Tasks" ng-click="clearCompleted()">
+				</div>
 			</div>
 		</div>
 	</div>
