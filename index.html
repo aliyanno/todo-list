@@ -2,15 +2,15 @@
 <html lang="en" ng-app="toDoApp">
 <head>
 	<title>To Do List</title>
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="todo-style.css">
-	<script src="underscore.js"></script>
-	<script src="angular.js"></script>
-	<script src="todo-list.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/todo-style.css">
+	<script src="js/underscore.js"></script>
+	<script src="js/angular.js"></script>
+	<script src="js/todo-list.js"></script>
 </head>
 
 <body ng-controller="toDoController">
-	<h2>Tasks for Today: {{ totalTasks }}</h2>
+	<h2>Tasks for Today: {{ getTotalTasks() }}</h2>
 	<ul class="no-style">
 		<li ng-repeat="task in tasks">
 			<input type="checkbox" ng-model="task.done">
