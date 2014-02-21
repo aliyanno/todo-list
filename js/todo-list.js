@@ -19,8 +19,8 @@ toDoApp.controller("toDoController", ["$scope", function($scope) {
 
 		}
 	}
-	$scope.addTask = function(arg) {
-		$scope.tasks.push({"name": arg, "done": false});
+	$scope.addTask = function() {
+		$scope.tasks.push({"name": $scope.newTaskName, "done": false});
 		$scope.newTaskName = "";
 	}	
 	$scope.isEmpty = function() {
